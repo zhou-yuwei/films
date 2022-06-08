@@ -1,0 +1,13 @@
+<div *ngFor="serie$ |async as serie">
+  <div *ngFor="let saison of serie.saisons">
+    <img [src]="saison.image" [alt]="saison.image">
+  </div>
+</div>
+
+
+
+<div *ngIf = "series$ | async as series">
+  <div *ngFor="let serie of series">
+    <img [src]="serie.image" [alt]="serie.nom" (click)="clicSurImage(serie.id)">
+  </div>
+</div>
